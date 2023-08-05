@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400;1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+    letter-spacing: 1px;
+    -webkit-user-drag: none;
+}
+
+/* navigation bar */
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 10%;
+    background: #EAAD00;
+    z-index: 5;
+}
+
+nav img {
+    width: 150px;
+    object-fit: fill;
+    user-select: none;
+    cursor: pointer;
+}
+
+/* menu icon start */
+nav .menu {
+    width: 40px;
+    height: 40px;
+    padding-left: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    user-select: none;
+    cursor: pointer;
+    display: none;
+}
+
+.menu div {
+    width: 80%;
+    height: 4px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.menu div:first-child {
+    width: 60%;
+    transition: 250ms;
+}
+
+.menu div:nth-child(2) {
+    width: 100%;
+    transition: 250ms;
+}
+
+.menu div:last-child {
+    width: 50%;
+    transition: 250ms;
+}
+
+.menu.close div:first-child {
+    width: 100%;
+    transform: rotate(45deg) translate(8px, 7px);
+}
+
+.menu.close div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.close div:last-child {
+    width: 100%;
+    transform: rotate(-45deg) translate(8px, -7px);
+}
+
+/* menu icon end */
+
+nav .links {
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    text-transform: uppercase;
+    font-style: oblique;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    transition: color 200ms;
+}
+
+.links a.active {
+    text-decoration: underline;
+}
+
+.links a:hover {
+    color: #000000;
+}
+
+nav .search {
+    max-width: 150px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.search input {
+    width: 70%;
+    height: 100%;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    background: #FFC400;
+}
+
+.search label {
+    width: 30%;
+    height: 100%;
+    line-height: 32px;
+    text-align: center;
+    background: #00BFCB;
+    color: #fff;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 10px;
+    background: url(../img/header.png) center / cover no-repeat;
+}
+
+header .header-text {
+    max-width: 350px;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+header img {
+    max-width: 300px;
+    width: 100%;
+}
+
+/* dog services 1 */
+
+.services1,
+.services3 {
+    width: 100%;
+    padding: 50px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.services1 .service-text {
+    
+    padding: 20px 5px;
+}
+
+.service-text p:first-child {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.service-text button:last-child {
+    text-transform: uppercase;
+    background: #fcc302;
+    border: none;
+}
+
+.service-text button:last-child:hover {
+    background: #EAAD00;
+}
+
+.services1 img,
+.services3 img {
+    max-width: 250px;
+    width: 100%;
+    -webkit-user-drag: none;
+    cursor: pointer;
+}
+
+
+/* dog services 2 */
+
+.services2,
+.buynow,
+.vetcare {
+    padding: 50px 10%;
+    text-align: center;
+    background: #fcc302;
+}
+
+.services2 > p:first-child,
+.buynow > p:first-child,
+.vetcare > p:first-child {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.carousel-wrapper .arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 40px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 200ms;
+}
+
+.carousel-wrapper .arrow:first-child {
+    left: -25px;
+    text-align: right;
+}
+
+.carousel-wrapper .arrow:last-child {
+    right: -28px;
+}
+
+.carousel-wrapper .arrow:hover {
+    background: rgb(199, 185, 185);
+}
+
+.carousel-wrapper .carousel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.carousel.scrolling {
+    scroll-behavior: smooth;
+}
+
+.carousel span {
+    max-width: 250px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    user-select: none;
+    cursor: grab;
+}
+
+.carousel span img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel span > p:nth-child(2) {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.carousel span > p:nth-child(3) {
+    font-size: .8rem;
+    margin: 0;
+}
+
+
+/* dog services 3 */
+/* dog services 1 and 3 style together */
+
+.services3 {
+    text-align: right;
+}
+
+/* buynow */
+/* buynow and services 2 style together */
+
+.buynow span {
+    cursor: pointer;
+}
+
+/* vetcare team */
+
+.vetcare {
+    background: #fff;
+}
+
+.vetcare .carousel p:nth-child(2) {
+    font-size: 1.2rem;
+}
+
+.vetcare span {
+    cursor: default;
+}
+
+/* emargency */
+
+.emargency {
+    width: 100%;
+    padding: 50px 10%;
+    background: url(../img/emargency-bg.png) center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.emargency span p {
+    margin: 2px 0;
+    text-transform: capitalize;
+}
+
+/* recent post */
+
+.recent-post {
+    text-align: center;
+    padding: 50px 10%;
+}
+
+.recent-post p:first-child {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.recent-post .posts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex: 1 1 200px;
+    transition: 1s;
+}
+
+.posts .card-items {
+    max-width: 350px;
+    width: 100%;
+    text-align: left;
+    transition: box-shadow 250ms;
+}
+
+.posts .card-items:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card-items img {
+    width: 100%;
+}
+
+.card-items div,
+.card-items > p,
+.card-items a {
+    padding: 0 10px;
+}
+
+.card-items > div p:nth-child(1) {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.card-items > div p:nth-child(2) {
+    font-size: .8rem;
+    color: #00bec9;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    padding: 50px 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px 10px;
+    flex-wrap: wrap;
+    flex: 1 1 200px;
+    color: #fff;
+    background: #343434;
+}
+
+footer p:first-child {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+footer .column {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.column a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.column a:hover {
+    text-decoration: underline;
+}
+
+.column .email-box {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-box input {
+    width: 80%;
+    height: 100%;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.email-box span {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 2rem;
+    user-select: none;
+    cursor: pointer;
+    background: #00bec9;
+    border-radius: 0 5px 5px 0;
+    transition: background 250ms;
+}
+
+.email-box span:hover {
+    background: #058990;
+}
+
+.column .icons {
+    padding: 10px 0;
+    text-align: right;
+}

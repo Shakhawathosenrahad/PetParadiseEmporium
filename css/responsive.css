@@ -1,0 +1,40 @@
+/* responsive navigation */
+@media (width <= 700px) {
+
+    nav .menu {
+        order: 2;
+        display: flex;
+    }
+
+    nav .links {
+        position: fixed;
+        right: -260px;
+        top: 70px;
+        width: 250px;
+        height: 400px;
+        flex-direction: column;
+        background: #000;
+        transition: right 250ms;
+        text-align: center;
+    }
+
+    .links a {
+        width: 50%;
+        color: #000;
+        background: #fff;
+    }
+
+    .links a:hover {
+        color: #ffffff;
+        background: #acabab;
+    }
+}
+
+/* services1, services3 */
+
+@media (width <= 550px) {
+    .services1,
+    .services3 {
+        flex-direction: column;
+    }
+}
